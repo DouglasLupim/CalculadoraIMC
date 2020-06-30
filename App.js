@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { Text, View, StyleSheet, SafeAreaView, Keyboard, TouchableWithoutFeedback }from 'react-native';
+import { Text, View, StyleSheet, SafeAreaView, Keyboard, TouchableOpacity }from 'react-native';
 import { TextInput, Button } from 'react-native-paper';
 
 export default function App() {
@@ -14,30 +14,31 @@ export default function App() {
   const [altura, setAltura] = useState('0');
   const [imc, setImc] = useState('0');
   const [legenda, setLegenda] = useState('Inderteminado');
-  const [cor, setCor] = useState('#bdc3c7')
+  const [cor, setCor] = useState('#dfe6e9')
 
   calcularIMC = () => {
     const resultado = peso / (altura * altura);
 
     setImc(Math.ceil (resultado));
-    if(resultado == '') {
+    if(peso == '' && altura == '') {
       setLegenda('Inderteminado');
-      setCor('#bdc3c7');
+      setCor('#dfe6e9');
+      setImc('0');
     } else if(resultado < 18.5) {
       setLegenda('Magreza');
-      setCor('#e74c3c');
+      setCor('#d63031');
     } else if(resultado >= 18.5 && resultado < 25) {
       setLegenda('Normal');
-      setCor('#2ecc71');
+      setCor('#55efc4');
     } else if(resultado >= 25 && resultado < 30) {
       setLegenda('Sobrepeso');
-      setCor('#f1c40f');
+      setCor('#fdcb6e');
     } else if(resultado >= 30 && resultado < 40) {
       setLegenda('Obesidade');
-      setCor('#e67e22');
+      setCor('#e17055');
     } else if(resultado >= 40) {
       setLegenda('Obesidade Grave');
-      setCor('#e74c3c');
+      setCor('#d63031');
     }
   }
 
@@ -74,6 +75,13 @@ export default function App() {
         onPress={calcularIMC}>
           Calcular
         </Button>
+
+        <View>
+          <TouchableOpacity>
+            <Text>DÚVIDAS? CONSULTE A TABELA</Text>
+          </TouchableOpacity>
+        </View>
+
       </View>
     </SafeAreaView>
   );
