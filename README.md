@@ -13,7 +13,7 @@ Um aplicativo mobile para conseguir identificar sua Massa Corporea e ter um cont
 - [ ] Informar o Peso Ideal.
 - [ ] Sugerir dicas e exercícios.
 
-> Aplicativo ainda em desenvolvimento, todo update será o README será atualizado.
+> Aplicativo ainda em desenvolvimento, todo update o README será atualizado.
 
 # Compatibilidade
 - [X] IOS.
