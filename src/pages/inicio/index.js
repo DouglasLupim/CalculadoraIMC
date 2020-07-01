@@ -9,7 +9,7 @@ export default function Inicio() {
     const [peso, setPeso] = useState('0');
     const [altura, setAltura] = useState('0');
     const [imc, setImc] = useState('0');
-    const [legenda, setLegenda] = useState('Inderteminado');
+    const [legenda, setLegenda] = useState('Indeterminado');
     const [cor, setCor] = useState('#dfe6e9');
     const [modalvisible, setModalvisible] = useState(false);
 
@@ -19,24 +19,27 @@ export default function Inicio() {
         setImc(Math.ceil (resultado));
 
         if(peso == '' && altura == '') {
-            setLegenda('Inderteminado');
+            setLegenda('Indeterminado');
             setCor('#dfe6e9');
             setImc('0');
         } else if(resultado < 18.5) {
-            setLegenda('Magreza');
+            setLegenda('Abaixo do Peso');
             setCor('#d63031');
         } else if(resultado >= 18.5 && resultado < 25) {
-            setLegenda('Normal');
+            setLegenda('Peso Normal');
             setCor('#55efc4');
         } else if(resultado >= 25 && resultado < 30) {
             setLegenda('Sobrepeso');
             setCor('#fdcb6e');
-        } else if(resultado >= 30 && resultado < 40) {
-            setLegenda('Obesidade');
+        } else if(resultado >= 30 && resultado < 35) {
+            setLegenda('Obesidade I');
+            setCor('#fab1a0');
+        } else if(resultado >= 35 && resultado < 40) {
+            setLegenda('Obesidade II');
             setCor('#e17055');
         } else if(resultado >= 40) {
-            setLegenda('Obesidade Grave');
-            setCor('#d63031');
+            setLegenda('Obesidade III');
+            setCor('#d63031');            
         }
     }
 
@@ -90,7 +93,7 @@ export default function Inicio() {
             presentationStyle
             animationType={"slide"} 
             visible={modalvisible}>
-                <Duvidas />
+                <Duvidas setModalvisible={setModalvisible} />
             </Modal>
         </SafeAreaView>
     </TouchableWithoutFeedback>
