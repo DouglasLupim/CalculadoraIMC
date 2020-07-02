@@ -36,7 +36,24 @@ const styles = StyleSheet.create({
         width: '100%',
         height: 1,
     },
+
+    fecharContainer: {
+        marginTop: 20,
+        width: '90%',
+    },
     
+    fecharButton: {
+        justifyContent: 'center',
+        alignItems: 'center',
+        height: 50,
+        backgroundColor: '#d63031',
+        borderRadius: 50,
+    },
+
+    fecharText: {
+        color: '#ecf0f1',
+        fontWeight: 'bold',
+    },
 })
 
 export default styles; 

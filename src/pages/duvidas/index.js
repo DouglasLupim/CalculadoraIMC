@@ -49,9 +49,11 @@ export default function Duvidas({ setModalvisible }) {
                 />
             </View>
 
-            <TouchableOpacity onPress={()=>setModalvisible(false)}>
-                <Text>fechar</Text>
-            </TouchableOpacity>
+            <View style={styles.fecharContainer}>
+                <TouchableOpacity style={styles.fecharButton} onPress={()=>setModalvisible(false)}>
+                    <Text style={styles.fecharText}>Fechar</Text>
+                </TouchableOpacity>
+            </View>
         </View>
     );
 }
