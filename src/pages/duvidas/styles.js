@@ -39,13 +39,13 @@ const styles = StyleSheet.create({
 
     fecharContainer: {
         marginTop: 20,
-        width: '90%',
+        width: '50%',
     },
     
     fecharButton: {
         justifyContent: 'center',
         alignItems: 'center',
-        height: 50,
+        height: 40,
         backgroundColor: '#d63031',
         borderRadius: 50,
     },

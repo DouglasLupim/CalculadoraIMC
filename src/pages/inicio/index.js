@@ -1,11 +1,14 @@
 import React, {useState} from 'react';
-import { Text, View, SafeAreaView, TouchableOpacity, TouchableWithoutFeedback, Keyboard, Modal, StatusBar  } from 'react-native';
+import { Text, View, SafeAreaView, TouchableOpacity, TouchableWithoutFeedback, Keyboard, StatusBar } from 'react-native';
 import { TextInput, Button } from 'react-native-paper';
+import { useNavigation } from '@react-navigation/native';
 
 import styles from './styles';
 import Duvidas from '../duvidas';
 
 export default function Inicio() {
+    const navigation = useNavigation();
+
     const [peso, setPeso] = useState('0');
     const [altura, setAltura] = useState('0');
     const [imc, setImc] = useState('0');
@@ -84,17 +87,11 @@ export default function Inicio() {
             </View>
 
             <View style={styles.duvidaContainer}>
-                <TouchableOpacity style={styles.duvidaButton} onPress={()=>setModalvisible(true)}>
+                <TouchableOpacity style={styles.duvidaButton} onPress={()=>navigation.navigate('Duvida')}>
                     <Text style={styles.duvidaText}>Dúvidas? Consulte a Tabela.</Text>
                 </TouchableOpacity>
             </View>
 
-            <Modal
-            presentationStyle
-            animationType={"slide"} 
-            visible={modalvisible}>
-                <Duvidas setModalvisible={setModalvisible} />
-            </Modal>
         </SafeAreaView>
     </TouchableWithoutFeedback>
   );

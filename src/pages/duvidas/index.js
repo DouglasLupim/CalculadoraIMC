@@ -1,10 +1,13 @@
 import React from 'react';
 import { View, Text, TouchableOpacity, StatusBar } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 
 import styles from './styles';
 import Tabela from '../components/tabela';
 
-export default function Duvidas({ setModalvisible }) {
+export default function Duvidas() {
+    const navigation = useNavigation();
+
     return(
         <View style={styles.app}>
             <StatusBar barStyle="light-content" />
@@ -50,7 +53,7 @@ export default function Duvidas({ setModalvisible }) {
             </View>
 
             <View style={styles.fecharContainer}>
-                <TouchableOpacity style={styles.fecharButton} onPress={()=>setModalvisible(false)}>
+                <TouchableOpacity style={styles.fecharButton} onPress={()=>navigation.goBack()}>
                     <Text style={styles.fecharText}>Fechar</Text>
                 </TouchableOpacity>
             </View>
