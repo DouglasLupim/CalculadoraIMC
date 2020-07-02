@@ -2,8 +2,7 @@
 Um aplicativo mobile para conseguir identificar sua Massa Corporea e ter um controle para lhe ajudar a entrar no peso ideal.
 > O IMC é o Índice de Massa Corporea, com ele você pode saber se a pessoa se encontra no peso ideal.
 
-![1](https://user-images.githubusercontent.com/54004461/86268950-62342480-bb9f-11ea-8753-51d2f501386c.jpg)
-![2](https://user-images.githubusercontent.com/54004461/86268952-63655180-bb9f-11ea-9da0-05b88af850b0.jpg)
+![1](https://user-images.githubusercontent.com/54004461/86382303-1b5c3280-bc64-11ea-8e00-b7fd8b85eebe.jpg)
 
 > Conforme for atualizando as fotos das novas funcionalidades serão adicionadas.
 
