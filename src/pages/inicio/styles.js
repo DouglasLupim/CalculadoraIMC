@@ -68,6 +68,19 @@ const styles = StyleSheet.create({
     duvidaText: {      
         fontWeight: 'bold',
     },
+
+    sobreContainer: {
+        top: 50,
+    },
+    
+    sobreButton: {
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
+
+    sobreText: {
+        fontWeight: 'bold',
+    },
 })
 
 export default styles; 

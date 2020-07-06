@@ -11,6 +11,7 @@ export default function Duvidas() {
     return(
         <View style={styles.app}>
             <StatusBar barStyle="light-content" />
+            <View style={styles.indicator} />
             <View style={styles.tabelaContainer}>
                 <View style={styles.tabelaTop}>
                     <Text style={styles.tabelaTitle}>Tabela de IMC</Text>
@@ -50,12 +51,6 @@ export default function Duvidas() {
                     categoria='Obesidade III'
                     imc='Maior ou Igual à 40'
                 />
-            </View>
-
-            <View style={styles.fecharContainer}>
-                <TouchableOpacity style={styles.fecharButton} onPress={()=>navigation.goBack()}>
-                    <Text style={styles.fecharText}>Fechar</Text>
-                </TouchableOpacity>
             </View>
         </View>
     );

@@ -5,6 +5,7 @@ import { TransitionPresets } from '@react-navigation/stack';
 
 import Inicio from '../pages/inicio';
 import Duvidas from '../pages/duvidas';
+import Sobre from '../pages/sobre';
 
 const Stack = createStackNavigator();
 
@@ -12,11 +13,11 @@ export default function InicioRoutes() {
   return (
     <Stack.Navigator
     screenOptions={{
+        gestureResponseDistance: { vertical: 1000 },
         cardOverlayEnabled: true,
     }}
     mode='modal'
     headerMode='none'
-    
     >
       <Stack.Screen 
       name="Inico" 
@@ -26,9 +27,18 @@ export default function InicioRoutes() {
       name="Duvida"
       component={Duvidas}
       options={{
-            cardStyleInterpolator: CardStyleInterpolators.forModalPresentationIOS,
-            ...TransitionPresets.ModalPresentationIOS
+          cardStyleInterpolator: CardStyleInterpolators.forModalPresentationIOS,
+          ...TransitionPresets.ModalPresentationIOS,
+          safeAreaInsets: {top: '90%'}
         }}
+      />
+      <Stack.Screen 
+      name="Sobre"
+      component={Sobre}
+      options={{
+        cardStyleInterpolator: CardStyleInterpolators.forModalPresentationIOS,
+        ...TransitionPresets.ModalPresentationIOS,
+      }}
       />
     </Stack.Navigator>
   );

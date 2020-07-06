@@ -37,22 +37,13 @@ const styles = StyleSheet.create({
         height: 1,
     },
 
-    fecharContainer: {
-        marginTop: 20,
-        width: '50%',
-    },
-    
-    fecharButton: {
-        justifyContent: 'center',
-        alignItems: 'center',
-        height: 40,
-        backgroundColor: '#d63031',
+    indicator: {
+        width: 50,
+        height: 5,
+        backgroundColor: '#ccc',
         borderRadius: 50,
-    },
-
-    fecharText: {
-        color: '#ecf0f1',
-        fontWeight: 'bold',
+        alignSelf: 'center',
+            marginTop: 5
     },
 })
 

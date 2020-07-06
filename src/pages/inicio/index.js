@@ -25,25 +25,27 @@ export default function Inicio() {
             setLegenda('Indeterminado');
             setCor('#dfe6e9');
             setImc('0');
+            alert('Digite seu Peso e Altura');
         } else if(resultado < 18.5) {
             setLegenda('Abaixo do Peso');
             setCor('#d63031');
-        } else if(resultado >= 18.5 && resultado < 25) {
+        } else if(resultado < 25) {
             setLegenda('Peso Normal');
             setCor('#55efc4');
-        } else if(resultado >= 25 && resultado < 30) {
+        } else if(resultado < 30) {
             setLegenda('Sobrepeso');
             setCor('#fdcb6e');
-        } else if(resultado >= 30 && resultado < 35) {
+        } else if(resultado < 35) {
             setLegenda('Obesidade I');
             setCor('#fab1a0');
-        } else if(resultado >= 35 && resultado < 40) {
+        } else if(resultado < 40) {
             setLegenda('Obesidade II');
             setCor('#e17055');
         } else if(resultado >= 40) {
             setLegenda('Obesidade III');
             setCor('#d63031');            
         }
+
     }
 
   return (
@@ -88,10 +90,15 @@ export default function Inicio() {
 
             <View style={styles.duvidaContainer}>
                 <TouchableOpacity style={styles.duvidaButton} onPress={()=>navigation.navigate('Duvida')}>
-                    <Text style={styles.duvidaText}>Dúvidas? Consulte a Tabela.</Text>
+                    <Text style={styles.duvidaText}>Dúvidas? Consulte a Tabela</Text>
                 </TouchableOpacity>
             </View>
 
+            <View style={styles.sobreContainer}>
+                <TouchableOpacity style={styles.sobreButton} onPress={()=>navigation.navigate('Sobre')}>
+                    <Text style={styles.sobreText}>Sobre nós</Text>
+                </TouchableOpacity>
+            </View>
         </SafeAreaView>
     </TouchableWithoutFeedback>
   );
